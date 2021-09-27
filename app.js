@@ -56,7 +56,13 @@ function getDayTrip(){
     while(userResponse === "no"){
         result = getRandomTrip(places);
             console.log(result);
-            alert (`Your NEW day trip will be to ${result}. \nYou will be dinning at ${result2}`)
+        result2 = getRandomTrip(dinning);
+            console.log(result2);
+        result3 = getRandomTrip(trans);
+            console.log(result3);
+        result4 = getRandomTrip(fun);
+            console.log(result4);
+            alert (`Your NEW day trip will be to ${result}. \nYou will be dinning at ${result2}\nYour mode of transportation will be by ${result3} . \nYou will be entertained by ${result4}`)
             userResponse = prompt ("Are you happy with this new selection?");
         
     }
