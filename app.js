@@ -1,5 +1,6 @@
 "use strict"
 
+// Random Selection Calculation
 function getRandomTrip(arrayOne){
     let random = Math.random() 
     let randomByArray = random * arrayOne.length;
@@ -32,9 +33,10 @@ function getRandomTrip(arrayOne){
 //     return arrayOfEntertainment[random4];
 //}
 
+// Arrays for each event
 function getDayTrip(){
 
-    let places = ['Anchorage','New York', 'Honolulu', 'Seatle'];
+    let places = ['Anchorage, AK','New York, NY', 'Honolulu, HI', 'Seatle, WA'];
     let result = getRandomTrip(places)
     console.log (result)
 
@@ -49,11 +51,11 @@ function getDayTrip(){
     let fun = ['Hiking', 'Bungee Jumping', 'Cliff Diving', 'Site Seeing']
     let result4 = getRandomTrip(fun);
     console.log (result4)
-    alert (`Your day trip will be to ${result}. \nYou will be dinning at ${result2}. \nYour mode of transportation will be by ${result3} . \nYou will be entertained by ${result4}`)
+    alert (`Your Day Trip will be to ${result}. \nYou will be Dinning at ${result2}. \nYour Mode of Transportation will be by ${result3} . \nYou will be Entertained by ${result4}.`)
 
-
-    let userResponse = prompt ("Are you happy with the selection? Yes or No?");
-    while(userResponse === "no"){
+// While Loop asking if user likes selections
+    let userResponse = prompt ("Are you happy with the Selection? Yes or No?");
+    while(userResponse === "no" || userResponse === "No" || userResponse === "NO" || userResponse === "n"){
         result = getRandomTrip(places);
             console.log(result);
         result2 = getRandomTrip(dinning);
@@ -62,19 +64,18 @@ function getDayTrip(){
             console.log(result3);
         result4 = getRandomTrip(fun);
             console.log(result4);
-            alert (`Your NEW day trip will be to ${result}. \nYou will be dinning at ${result2}\nYour mode of transportation will be by ${result3} . \nYou will be entertained by ${result4}`)
+            //Out put of new selctions if response is no
+            alert (`Your NEW Day Trip will be to ${result}. \nYou will be Dinning at ${result2}\nYour Mde of Transportation will be by ${result3} . \nYou will be Entertained by ${result4}.`)
             userResponse = prompt ("Are you happy with this new selection?");
         
     }
-    //userResponse = prompt ("Are you happy with this selection?");
-     //   if(userResponse === "no"){
-      //      getRandomTrip(places);
-      //      console.log(result)
-       //     alert (`Your day trip will be to ${result}. \nYou will be dinning at. \nYour mode of transportation will be by . \nYou will be entertained by`)
-      //      userResponse ="no"
-        //}else{
-         //   console.log("Trip Complete")
-        //}
+    if (userResponse === "yes"|| userResponse === "Yes" || userResponse === "YES");
+        console.log("Trip Complete")
+        alert (`CONGRATULATIONS! Your Day Trip is set: \nYou will be Traveling to ${result}. \nYou will be Dinning at ${result2}\nYour Mode of Transportation will be by ${result3} . \nYou will be Entertained by ${result4}.`)
+        //else (userResponse){
+            //prompt ("Please enter Yes or No");
+        
 }
+//Call Function of Arrays
 getDayTrip();
 
